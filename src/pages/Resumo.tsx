@@ -1,4 +1,5 @@
 import {useData} from "../context/DataContext.tsx";
+import GraficoVendas from "../components/GraficoVendas.tsx";
 
 const Resumo = () => {
     const { data } = useData()
@@ -32,7 +33,9 @@ const Resumo = () => {
                     </span>
                 </div>
             </div>
-            <div className="box mb">Gráficos</div>
+            <div className="box mb">
+                <GraficoVendas data={data} />
+            </div>
         </section>
     )
 }
